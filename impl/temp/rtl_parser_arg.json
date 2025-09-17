@@ -1,0 +1,125 @@
+{
+ "Device" : "GW1NR-9C",
+ "Files" : [
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/cpu/tv80_alu.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/cpu/tv80_core.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/cpu/tv80_mcode.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/cpu/tv80_reg.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/cpu/tv80s.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/cpu_z80.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/decoder.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_dpb/gowin_dpb.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_osc/gowin_osc.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_prom/gowin_prom_0.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_prom/gowin_prom_1.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_prom/gowin_prom_b0.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_prom/gowin_prom_b1.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_prom/gowin_prom_test.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_sdpb/gowin_sdpb.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_sp/gowin_sp.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/ram8k.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/rom8k_0.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/rom8k_1.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/video/gowin_clkdiv/gowin_clkdiv.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/video/gowin_rpll/gowin_rpll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/video/hdmi_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/video/timing_1024x768_flow.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/video/tmds_std_enc.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/video_ram.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/vram8k.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/zx_io.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/zx_spectrum_top.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/impl/temp/rtl_parser.result",
+ "Top" : "top",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

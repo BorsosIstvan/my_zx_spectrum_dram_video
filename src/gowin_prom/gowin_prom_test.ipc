@@ -1,0 +1,15 @@
+[General]
+ipc_version=4
+file=gowin_prom_test
+module=Gowin_pROM_test
+target_device=gw1nr9c-004
+type=ram_prom
+version=1.0
+
+[Config]
+DEPTH=8192
+LANG=0
+MEM_FILE=../../asm/poci_test.mi
+READ=0
+RESET_MODE=true
+WIDTH=8

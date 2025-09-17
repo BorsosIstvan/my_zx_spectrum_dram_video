@@ -1,0 +1,38 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <FileList>
+        <File path="src/cpu/tv80_alu.v" type="file.verilog" enable="1"/>
+        <File path="src/cpu/tv80_core.v" type="file.verilog" enable="1"/>
+        <File path="src/cpu/tv80_mcode.v" type="file.verilog" enable="1"/>
+        <File path="src/cpu/tv80_reg.v" type="file.verilog" enable="1"/>
+        <File path="src/cpu/tv80s.v" type="file.verilog" enable="1"/>
+        <File path="src/cpu_z80.v" type="file.verilog" enable="1"/>
+        <File path="src/decoder.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_dpb/gowin_dpb.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_osc/gowin_osc.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_prom/gowin_prom_0.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_prom/gowin_prom_1.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_prom/gowin_prom_b0.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_prom/gowin_prom_b1.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_prom/gowin_prom_test.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_sdpb/gowin_sdpb.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_sp/gowin_sp.v" type="file.verilog" enable="1"/>
+        <File path="src/ram8k.v" type="file.verilog" enable="1"/>
+        <File path="src/rom8k_0.v" type="file.verilog" enable="1"/>
+        <File path="src/rom8k_1.v" type="file.verilog" enable="1"/>
+        <File path="src/video/gowin_clkdiv/gowin_clkdiv.v" type="file.verilog" enable="1"/>
+        <File path="src/video/gowin_rpll/gowin_rpll.v" type="file.verilog" enable="1"/>
+        <File path="src/video/hdmi_top.v" type="file.verilog" enable="1"/>
+        <File path="src/video/timing_1024x768_flow.v" type="file.verilog" enable="1"/>
+        <File path="src/video/tmds_std_enc.v" type="file.verilog" enable="1"/>
+        <File path="src/video_ram.v" type="file.verilog" enable="1"/>
+        <File path="src/vram8k.v" type="file.verilog" enable="1"/>
+        <File path="src/zx_io.v" type="file.verilog" enable="1"/>
+        <File path="src/zx_spectrum_top.v" type="file.verilog" enable="1"/>
+        <File path="src/spectrum.cst" type="file.cst" enable="1"/>
+    </FileList>
+</Project>

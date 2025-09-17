@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" Lut="4" T_Register="395(0)" T_Alu="168(0)" T_Lut="1586(4)" T_Bsram="24(0)" T_Ssram="12(0)">
+ <SubModule name="hdmi" T_Register="152(0)" T_Alu="96(0)" T_Lut="140(0)">
+  <SubModule name="rpll"/>
+  <SubModule name="clkdiv"/>
+  <SubModule name="timing_flow" Register="25" Lut="40" T_Register="25(25)" T_Lut="40(40)"/>
+  <SubModule name="colorbar" Register="63" Lut="51" T_Register="63(63)" T_Lut="51(51)"/>
+  <SubModule name="enc_r" Register="24" Alu="32" Lut="17" T_Register="24(24)" T_Alu="32(32)" T_Lut="17(17)"/>
+  <SubModule name="enc_g" Register="20" Alu="32" Lut="16" T_Register="20(20)" T_Alu="32(32)" T_Lut="16(16)"/>
+  <SubModule name="enc_b" Register="20" Alu="32" Lut="16" T_Register="20(20)" T_Alu="32(32)" T_Lut="16(16)"/>
+ </SubModule>
+ <SubModule name="Z80" T_Register="224(0)" T_Alu="54(0)" T_Lut="1378(0)" T_Ssram="12(0)">
+  <SubModule name="cpu" Register="12" Lut="34" T_Register="224(12)" T_Alu="54(0)" T_Lut="1378(34)" T_Ssram="12(0)">
+   <SubModule name="i_tv80_core" Register="212" Alu="47" Lut="1143" T_Register="212(212)" T_Alu="54(47)" T_Lut="1344(1143)" T_Ssram="12(0)">
+    <SubModule name="i_mcode" Lut="193" T_Lut="193(193)"/>
+    <SubModule name="i_alu" Alu="7" Lut="8" T_Alu="7(7)" T_Lut="8(8)"/>
+    <SubModule name="i_reg" Ssram="12" T_Ssram="12(12)"/>
+   </SubModule>
+  </SubModule>
+ </SubModule>
+ <SubModule name="decoder" Lut="6" T_Lut="6(6)"/>
+ <SubModule name="rom0" T_Bsram="4(0)">
+  <SubModule name="prom_0" Bsram="4" T_Bsram="4(4)"/>
+ </SubModule>
+ <SubModule name="rom1" T_Bsram="4(0)">
+  <SubModule name="prom_1" Bsram="4" T_Bsram="4(4)"/>
+ </SubModule>
+ <SubModule name="vram" T_Bsram="4(0)">
+  <SubModule name="dpb_inst" Bsram="4" T_Bsram="4(4)"/>
+ </SubModule>
+ <SubModule name="ram1" T_Bsram="4(0)">
+  <SubModule name="ram_inst" Bsram="4" T_Bsram="4(4)"/>
+ </SubModule>
+ <SubModule name="ram2" T_Bsram="4(0)">
+  <SubModule name="ram_inst" Bsram="4" T_Bsram="4(4)"/>
+ </SubModule>
+ <SubModule name="ram3" T_Bsram="4(0)">
+  <SubModule name="ram_inst" Bsram="4" T_Bsram="4(4)"/>
+ </SubModule>
+ <SubModule name="io" Register="19" Alu="18" Lut="58" T_Register="19(19)" T_Alu="18(18)" T_Lut="58(58)"/>
+</Module>
