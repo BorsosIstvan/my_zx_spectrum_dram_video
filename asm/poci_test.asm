@@ -1,17 +1,37 @@
         ORG 0000h
-		LD SP,$8000        ; stack in RAM
+		LD SP,$5FFF        ; stack in RAM
 		JP START
         ; vul tot adres $0038 met NOPs
         defs $0038 - $, 0x00    
 
         JP INT_HANDLER
-row_counter:   DB 0 
 START:		
 
 		
 		CALL BLUE_SCREEN
 		CALL CLEAR_SCREEN
 		CALL PRINT_A
+		
+		; RAM TEST
+		; RAM1 = 0x6000 - 0x7FFF
+		LD HL,0x6000
+		LD DE,0x7FFF
+		CALL TEST_RAM1_BLOCK
+
+		; RAM2 = 0x8000 - 0x9FFF
+		LD HL,0x8000
+		LD DE,0x9FFF
+		LD IX,PRINT_TEST_RAM2_OK
+		LD IY,PRINT_TEST_RAM2_FAIL
+		CALL TEST_RAM2_BLOCK
+
+		; RAM3 = 0xA000 - 0xBFFF
+		LD HL,0xA000
+		LD DE,0xFFFF
+		LD IX,PRINT_TEST_RAM3_OK
+		LD IY,PRINT_TEST_RAM3_FAIL
+		CALL TEST_RAM3_BLOCK
+
 		IM 1
 		EI
 
@@ -25,53 +45,13 @@ INT_HANDLER
         PUSH HL
 		CALL PRINT_B
 		CALL PRINT_IO
-		CALL PRINT_COPYRIGHT
         POP HL
         POP DE
         POP BC
         POP AF
         EI
         RETI		
-INT_HANDLER_2:
-        PUSH AF
-        PUSH BC
-        PUSH DE
-        PUSH HL
-		CALL PRINT_B
-        ; row_counter ophalen
-        LD HL,row_counter
-        LD A,(HL)
 
-        ; Bereken poortadres = (row<<8)|$FE
-        CPL                 ; ZX rij-actief = 0, dus invert bits
-        LD B,A
-        LD C,$FE
-        IN A,(C)            ; lees toetsenrij
-
-        ; Schrijf A naar VRAM
-        ; basisadres = $4085
-        LD H,$40
-        LD L,$85
-        LD D,(row_counter)
-        LD E,0
-        ADD HL,DE           ; HL = 4085 + row_counter*256
-        LD (HL),A           ; sla databuswaarde op scherm
-
-        ; row_counter++
-        LD A,(row_counter)
-        INC A
-        CP 8
-        JR NZ,no_wrap
-        XOR A               ; terug naar 0
-no_wrap:
-        LD (row_counter),A
-
-        POP HL
-        POP DE
-        POP BC
-        POP AF
-        EI
-        RETI
 		
 ;============================================
 ;		SUBRUTINES
@@ -172,6 +152,327 @@ PRINT_IO:
 		IN A,(C)
 		LD (HL), A
 		RET
+		
+PRINT_TEST_RAM1_OK:
+		PUSH HL
+		LD HL,$4010
+		LD A,%00111000
+		LD (HL),A
+		LD HL,$4110
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4210
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4310
+		LD A,%01111100
+		LD (HL),A
+		LD HL,$4410
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4510
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4610
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4710
+		LD A,%00000000
+		LD (HL),A
+;		LD HL,$5810
+;		LD A,%00000111
+;		LD (HL),A
+		POP HL
+		RET
+
+PRINT_TEST_RAM1_FAIL:
+		PUSH HL
+		LD HL,$4010
+		LD A,%01111000
+		LD (HL),A
+		LD HL,$4110
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4210
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4310
+		LD A,%01111000
+		LD (HL),A
+		LD HL,$4410
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4510
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4610
+		LD A,%01111000
+		LD (HL),A
+		LD HL,$4710
+		LD A,%00000000
+		LD (HL),A
+		LD HL,$5810
+		LD A,%00001111
+		LD (HL),A
+		POP HL
+		RET
+		
+PRINT_TEST_RAM2_OK:
+		LD HL,$4030
+		LD A,%00111000
+		LD (HL),A
+		LD HL,$4130
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4230
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4330
+		LD A,%01111100
+		LD (HL),A
+		LD HL,$4430
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4530
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4630
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4730
+		LD A,%00000000
+		LD (HL),A
+		LD HL,$5830
+		LD A,%00001111
+		LD (HL),A
+		RET
+
+PRINT_TEST_RAM2_FAIL:
+		LD HL,$4030
+		LD A,%01111000
+		LD (HL),A
+		LD HL,$4130
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4230
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4330
+		LD A,%01111000
+		LD (HL),A
+		LD HL,$4430
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4530
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4630
+		LD A,%01111000
+		LD (HL),A
+		LD HL,$4730
+		LD A,%00000000
+		LD (HL),A
+		LD HL,$5830
+		LD A,%00001111
+		LD (HL),A
+		RET
+		
+PRINT_TEST_RAM3_OK:
+		LD HL,$4050
+		LD A,%00111000
+		LD (HL),A
+		LD HL,$4150
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4250
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4350
+		LD A,%01111100
+		LD (HL),A
+		LD HL,$4450
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4550
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4650
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4750
+		LD A,%00000000
+		LD (HL),A
+		LD HL,$5850
+		LD A,%00001111
+		LD (HL),A
+		RET
+
+PRINT_TEST_RAM3_FAIL:
+		LD HL,$4050
+		LD A,%01111000
+		LD (HL),A
+		LD HL,$4150
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4250
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4350
+		LD A,%01111000
+		LD (HL),A
+		LD HL,$4450
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4550
+		LD A,%01000100
+		LD (HL),A
+		LD HL,$4650
+		LD A,%01111000
+		LD (HL),A
+		LD HL,$4750
+		LD A,%00000000
+		LD (HL),A
+		LD HL,$5850
+		LD A,%00001111
+		LD (HL),A
+		RET
+
+		
+	;-----------------------------------------
+	; Test RAM van adres HL tot adres DE
+	; In: HL = startadres
+	;     DE = eindadres
+	;     IX = pointer naar PRINT_OK routine
+	;     IY = pointer naar PRINT_FAIL routine
+	;-----------------------------------------
+TEST_RAM1_BLOCK:
+        PUSH AF
+        PUSH BC
+		PUSH DE
+		PUSH HL
+
+TEST_LOOP:
+        LD (HL),0x55
+        LD A,(HL)
+        CP 0x55
+        JR NZ,TEST_FAIL
+
+        LD (HL),0xAA
+        LD A,(HL)
+        CP 0xAA
+        JR NZ,TEST_FAIL
+
+        INC HL
+        LD A,H
+        CP D
+        JR NZ,TEST_LOOP
+        LD A,L
+        CP E
+        JR NZ,TEST_LOOP
+
+        ; ------------------------------
+        ; Als RAM OK → print
+        ; ------------------------------
+        CALL PRINT_TEST_RAM1_OK
+		POP HL
+		POP DE
+        POP BC
+        POP AF
+        RET
+
+TEST_FAIL:
+        CALL PRINT_TEST_RAM1_FAIL
+        POP HL
+		POP DE
+        POP BC
+        POP AF
+        RET
+
+TEST_RAM2_BLOCK:
+        PUSH AF
+        PUSH BC
+		PUSH DE
+		PUSH HL
+
+TEST_LOOP2:
+        LD (HL),0x55
+        LD A,(HL)
+        CP 0x55
+        JR NZ,TEST_FAIL2
+
+        LD (HL),0xAA
+        LD A,(HL)
+        CP 0xAA
+        JR NZ,TEST_FAIL2
+
+        INC HL
+        LD A,H
+        CP D
+        JR NZ,TEST_LOOP2
+        LD A,L
+        CP E
+        JR NZ,TEST_LOOP2
+
+        ; ------------------------------
+        ; Als RAM OK → print
+        ; ------------------------------
+        CALL PRINT_TEST_RAM2_OK
+		POP HL
+		POP DE
+        POP BC
+        POP AF
+        RET
+
+TEST_FAIL2:
+        CALL PRINT_TEST_RAM2_FAIL
+        POP HL
+		POP DE
+        POP BC
+        POP AF
+        RET
+		
+TEST_RAM3_BLOCK:
+        PUSH AF
+        PUSH BC
+		PUSH DE
+		PUSH HL
+
+TEST_LOOP3:
+        LD (HL),0x55
+        LD A,(HL)
+        CP 0x55
+        JR NZ,TEST_FAIL3
+
+        LD (HL),0xAA
+        LD A,(HL)
+        CP 0xAA
+        JR NZ,TEST_FAIL3
+
+        INC HL
+        LD A,H
+        CP D
+        JR NZ,TEST_LOOP3
+        LD A,L
+        CP E
+        JR NZ,TEST_LOOP3
+
+        ; ------------------------------
+        ; Als RAM OK → print
+        ; ------------------------------
+        CALL PRINT_TEST_RAM3_OK
+		POP HL
+		POP DE
+        POP BC
+        POP AF
+        RET
+
+TEST_FAIL3:
+        CALL PRINT_TEST_RAM3_FAIL
+        POP HL
+		POP DE
+        POP BC
+        POP AF
+        RET
 		
 PRINT_COPYRIGHT:
         ; Copyright

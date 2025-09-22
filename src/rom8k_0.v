@@ -3,6 +3,7 @@ module rom8k_0 (
     input wire reset,
     input wire oce,
     input wire ce,
+    input wire iorq,
     input wire [12:0] ad,
     inout wire [7:0] data_bus
 );
@@ -19,6 +20,6 @@ Gowin_pROM_0 prom_0 (
 );
 
     // Drie-staat verbinding
-    assign data_bus = (ce && oce) ? rom_dout : 8'bz;
+    assign data_bus = (ce && oce && !iorq) ? rom_dout : 8'bz;
 
 endmodule

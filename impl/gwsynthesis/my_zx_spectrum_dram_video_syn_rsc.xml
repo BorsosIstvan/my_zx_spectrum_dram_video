@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" Lut="4" T_Register="395(0)" T_Alu="168(0)" T_Lut="1586(4)" T_Bsram="24(0)" T_Ssram="12(0)">
+<Module name="top" Register="6" Lut="11" T_Register="399(6)" T_Alu="165(0)" T_Lut="1628(11)" T_Bsram="24(0)" T_Ssram="12(0)">
  <SubModule name="hdmi" T_Register="152(0)" T_Alu="96(0)" T_Lut="140(0)">
   <SubModule name="rpll"/>
   <SubModule name="clkdiv"/>
@@ -9,16 +9,17 @@
   <SubModule name="enc_g" Register="20" Alu="32" Lut="16" T_Register="20(20)" T_Alu="32(32)" T_Lut="16(16)"/>
   <SubModule name="enc_b" Register="20" Alu="32" Lut="16" T_Register="20(20)" T_Alu="32(32)" T_Lut="16(16)"/>
  </SubModule>
- <SubModule name="Z80" T_Register="224(0)" T_Alu="54(0)" T_Lut="1378(0)" T_Ssram="12(0)">
-  <SubModule name="cpu" Register="12" Lut="34" T_Register="224(12)" T_Alu="54(0)" T_Lut="1378(34)" T_Ssram="12(0)">
-   <SubModule name="i_tv80_core" Register="212" Alu="47" Lut="1143" T_Register="212(212)" T_Alu="54(47)" T_Lut="1344(1143)" T_Ssram="12(0)">
-    <SubModule name="i_mcode" Lut="193" T_Lut="193(193)"/>
+ <SubModule name="osc"/>
+ <SubModule name="Z80" T_Register="224(0)" T_Alu="54(0)" T_Lut="1410(0)" T_Ssram="12(0)">
+  <SubModule name="cpu" Register="12" Lut="34" T_Register="224(12)" T_Alu="54(0)" T_Lut="1410(34)" T_Ssram="12(0)">
+   <SubModule name="i_tv80_core" Register="212" Alu="47" Lut="1130" T_Register="212(212)" T_Alu="54(47)" T_Lut="1376(1130)" T_Ssram="12(0)">
+    <SubModule name="i_mcode" Lut="238" T_Lut="238(238)"/>
     <SubModule name="i_alu" Alu="7" Lut="8" T_Alu="7(7)" T_Lut="8(8)"/>
     <SubModule name="i_reg" Ssram="12" T_Ssram="12(12)"/>
    </SubModule>
   </SubModule>
  </SubModule>
- <SubModule name="decoder" Lut="6" T_Lut="6(6)"/>
+ <SubModule name="decoder" Lut="7" T_Lut="7(7)"/>
  <SubModule name="rom0" T_Bsram="4(0)">
   <SubModule name="prom_0" Bsram="4" T_Bsram="4(4)"/>
  </SubModule>
@@ -37,5 +38,5 @@
  <SubModule name="ram3" T_Bsram="4(0)">
   <SubModule name="ram_inst" Bsram="4" T_Bsram="4(4)"/>
  </SubModule>
- <SubModule name="io" Register="19" Alu="18" Lut="58" T_Register="19(19)" T_Alu="18(18)" T_Lut="58(58)"/>
+ <SubModule name="io" Register="17" Alu="15" Lut="60" T_Register="17(17)" T_Alu="15(15)" T_Lut="60(60)"/>
 </Module>

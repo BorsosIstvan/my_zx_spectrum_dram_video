@@ -15,7 +15,7 @@ OSC osc_inst (
     .OSCOUT(oscout)
 );
 
-defparam osc_inst.FREQ_DIV = 8;
+defparam osc_inst.FREQ_DIV = 16;
 defparam osc_inst.DEVICE = "GW1NR-9C";
 
 endmodule //Gowin_OSC

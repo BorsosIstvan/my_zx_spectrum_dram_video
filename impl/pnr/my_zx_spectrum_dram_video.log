@@ -7,6 +7,7 @@ Running placement......
 [10%] Placement Phase 0 completed
 [20%] Placement Phase 1 completed
 [30%] Placement Phase 2 completed
+WARN  (TA1132) :  'n103_18' was determined to be a clock but was not created.
 WARN  (TA1132) :  'hdmi/clkdiv/clkdiv_inst/CLKOUT.default_gen_clk' was determined to be a clock but was not created.
 [50%] Placement Phase 3 completed
 Running routing......
@@ -26,5 +27,5 @@ Generate file "C:\Users\Gebruiker\Documents\Mij werks\FPGA\fpga-zx-spectrum\my_z
 Generate file "C:\Users\Gebruiker\Documents\Mij werks\FPGA\fpga-zx-spectrum\my_zx_spectrum_dram_video\impl\pnr\my_zx_spectrum_dram_video.rpt.html" completed
 Generate file "C:\Users\Gebruiker\Documents\Mij werks\FPGA\fpga-zx-spectrum\my_zx_spectrum_dram_video\impl\pnr\my_zx_spectrum_dram_video.rpt.txt" completed
 Generate file "C:\Users\Gebruiker\Documents\Mij werks\FPGA\fpga-zx-spectrum\my_zx_spectrum_dram_video\impl\pnr\my_zx_spectrum_dram_video.tr.html" completed
-Wed Sep 17 12:01:15 2025
+Sun Sep 21 23:08:40 2025
 

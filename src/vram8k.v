@@ -4,6 +4,7 @@ module vram8k (
     input  wire        oce,       // output enable CPU
     input  wire        ce,        // chip select CPU
     input  wire        wre,       // write enable CPU
+    input  wire        iorq,
     input  wire [12:0] ad,        // adres CPU
     inout  wire [7:0]  data_bus,  // tri-state data bus CPU
     // Video poort B
@@ -36,6 +37,6 @@ module vram8k (
     );
 
     // Tri-state verbinding voor CPU
-    assign data_bus = (ce && oce && !wre) ? ram_dout : 8'bz;
+    assign data_bus = (ce && oce && !wre && !iorq) ? ram_dout : 8'bz;
 
 endmodule

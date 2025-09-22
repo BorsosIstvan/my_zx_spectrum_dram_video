@@ -38,7 +38,7 @@ wire cpu_halt_n, cpu_mreq_n, cpu_iorq_n, cpu_rd_n, cpu_wr_n, cpu_int_n;
 
 // ================= Z80 =================
 cpu_z80 Z80 (
-    .clk(~clk),
+    .clk(~clk_spectrum),
     .reset_n(resetn),
     .address_bus(address_bus),
     .data_bus(data_bus),
@@ -61,19 +61,21 @@ decoder decoder (
 // ================= ROM =================
 // 0x0000 - 0x1FFF  (8 KB)
 rom8k_0 rom0 (
-    .clk(clk),
+    .clk(clk_spectrum),
     .reset(~resetn),
     .oce(~cpu_rd_n),          // active bij read
     .ce(cs[0]),
+.iorq(~cpu_iorq_n),    
     .ad(address_bus[12:0]),
     .data_bus(data_bus)           // tri-state in wrapper
 );
 
 rom8k_1 rom1 (
-    .clk(clk),
+    .clk(clk_spectrum),
     .reset(~resetn),
     .oce(~cpu_rd_n),          // active bij read
     .ce(cs[1]),
+    .iorq(~cpu_iorq_n),
     .ad(address_bus[12:0]),
     .data_bus(data_bus)           // tri-state in wrapper
 );
@@ -85,10 +87,11 @@ wire [12:0] ad_video;
 //wire v_ce;
 
 vram8k vram (
-    .clk(clk),
+    .clk(clk_spectrum),
     .oce(~cpu_rd_n),
     .wre(~cpu_wr_n),
     .ce(cs[2]),
+    .iorq(~cpu_iorq_n),
     .reset(~resetn),
     .ad(address_bus[12:0]),
     .data_bus(data_bus),
@@ -102,30 +105,33 @@ vram8k vram (
 // ================= RAM ================
 // 0x6000 - 0x7FFF
 ram8k ram1 (
-    .clk(clk),
+    .clk(clk_spectrum),
     .oce(~cpu_rd_n),
     .wre(~cpu_wr_n),
     .ce(cs[3]),
+    .iorq(~cpu_iorq_n),
     .reset(~resetn),
     .ad(address_bus[12:0]),
     .data_bus(data_bus)       // tri-state
 );
 // 0x8000 - 0x9FFF
 ram8k ram2 (
-    .clk(clk),
+    .clk(clk_spectrum),
     .oce(~cpu_rd_n),
     .wre(~cpu_wr_n),
     .ce(cs[4]),
+    .iorq(~cpu_iorq_n),
     .reset(~resetn),
     .ad(address_bus[12:0]),
     .data_bus(data_bus)       // tri-state
 );
 // 0xA000 - 0xBFFF
 ram8k ram3 (
-    .clk(clk),
+    .clk(clk_spectrum),
     .oce(~cpu_rd_n),
     .wre(~cpu_wr_n),
     .ce(cs[5]),
+    .iorq(~cpu_iorq_n),
     .reset(~resetn),
     .ad(address_bus[12:0]),
     .data_bus(data_bus)       // tri-state
@@ -135,7 +141,7 @@ ram8k ram3 (
 // KEYBOARD
 
 zx_io_enter io (
-    .clk(clk),
+    .clk(clk_spectrum),
     .reset(~resetn),
     .btn_enter(knop),
     .ad(address_bus),
@@ -146,7 +152,9 @@ zx_io_enter io (
     .int(cpu_int_n)
 );
 
-assign led[0] = cpu_int_n;
-assign led[5] = 0;
+// TEST LED MEM LOCATIE
+
+assign led = ((address_bus == 16'hFDFE) && !cpu_iorq_n)? data_bus[5:0] : led; // 16'h5C78 is de interrupt teller adres, 5C92 laatste toets
+
 
 endmodule

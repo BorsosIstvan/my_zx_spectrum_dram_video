@@ -4,6 +4,7 @@ module ram8k (
     input wire ce,
     input wire reset,
     input wire wre,             // write enable
+    input wire iorq,
     input wire [12:0] ad,
     inout wire [7:0] data_bus
 );
@@ -23,6 +24,6 @@ module ram8k (
     );
 
     // Drie-staat verbinding
-    assign data_bus = (ce && oce && !wre) ? ram_dout : 8'bz;
+    assign data_bus = (ce && oce && !wre && !iorq) ? ram_dout : 8'bz;
 
 endmodule

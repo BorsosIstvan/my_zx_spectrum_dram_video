@@ -185,7 +185,7 @@
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/rom8k_0.v",
-      "InstLine" : 12,
+      "InstLine" : 13,
       "InstName" : "prom_0",
       "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_prom/gowin_prom_0.v",
       "ModuleLine" : 10,
@@ -195,7 +195,7 @@
    },
    {
     "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/zx_spectrum_top.v",
-    "InstLine" : 72,
+    "InstLine" : 73,
     "InstName" : "rom1",
     "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/rom8k_1.v",
     "ModuleLine" : 1,
@@ -203,7 +203,7 @@
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/rom8k_1.v",
-      "InstLine" : 12,
+      "InstLine" : 13,
       "InstName" : "prom_1",
       "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_prom/gowin_prom_1.v",
       "ModuleLine" : 10,
@@ -213,7 +213,7 @@
    },
    {
     "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/zx_spectrum_top.v",
-    "InstLine" : 87,
+    "InstLine" : 89,
     "InstName" : "vram",
     "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/vram8k.v",
     "ModuleLine" : 1,
@@ -221,7 +221,7 @@
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/vram8k.v",
-      "InstLine" : 19,
+      "InstLine" : 20,
       "InstName" : "dpb_inst",
       "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_dpb/gowin_dpb.v",
       "ModuleLine" : 10,
@@ -231,7 +231,7 @@
    },
    {
     "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/zx_spectrum_top.v",
-    "InstLine" : 104,
+    "InstLine" : 107,
     "InstName" : "ram1",
     "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/ram8k.v",
     "ModuleLine" : 1,
@@ -239,7 +239,7 @@
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/ram8k.v",
-      "InstLine" : 14,
+      "InstLine" : 15,
       "InstName" : "ram_inst",
       "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_sp/gowin_sp.v",
       "ModuleLine" : 10,
@@ -249,7 +249,7 @@
    },
    {
     "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/zx_spectrum_top.v",
-    "InstLine" : 114,
+    "InstLine" : 118,
     "InstName" : "ram2",
     "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/ram8k.v",
     "ModuleLine" : 1,
@@ -257,7 +257,7 @@
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/ram8k.v",
-      "InstLine" : 14,
+      "InstLine" : 15,
       "InstName" : "ram_inst",
       "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_sp/gowin_sp.v",
       "ModuleLine" : 10,
@@ -267,7 +267,7 @@
    },
    {
     "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/zx_spectrum_top.v",
-    "InstLine" : 124,
+    "InstLine" : 129,
     "InstName" : "ram3",
     "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/ram8k.v",
     "ModuleLine" : 1,
@@ -275,7 +275,7 @@
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/ram8k.v",
-      "InstLine" : 14,
+      "InstLine" : 15,
       "InstName" : "ram_inst",
       "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/gowin_sp/gowin_sp.v",
       "ModuleLine" : 10,
@@ -285,7 +285,7 @@
    },
    {
     "InstFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/zx_spectrum_top.v",
-    "InstLine" : 137,
+    "InstLine" : 143,
     "InstName" : "io",
     "ModuleFile" : "C:/Users/Gebruiker/Documents/Mij werks/FPGA/fpga-zx-spectrum/my_zx_spectrum_dram_video/src/zx_io.v",
     "ModuleLine" : 3,

@@ -15,4 +15,4 @@
 -width 8
 -read_mode bypass
 -reset_mode sync
--init_file C:\Users\Gebruiker\Documents\Mij werks\FPGA\fpga-zx-spectrum\my_zx_spectrum_dram_video\asm\poci_test.mi
+-init_file C:\Users\Gebruiker\Documents\Mij werks\FPGA\fpga-zx-spectrum\my_zx_spectrum_dram_video\test_rom\zx_test_rom.mi

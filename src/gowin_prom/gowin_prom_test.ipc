@@ -9,7 +9,7 @@ version=1.0
 [Config]
 DEPTH=8192
 LANG=0
-MEM_FILE=../../asm/poci_test.mi
+MEM_FILE=../../test_rom/zx_test_rom.mi
 READ=0
 RESET_MODE=true
 WIDTH=8
